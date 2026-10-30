@@ -29,7 +29,6 @@ import {
   Pencil,
   ShieldCheck,
   CheckCircle2,
-  Crown,
 } from "lucide-react";
 import {
   ResponsiveContainer,
@@ -77,7 +76,6 @@ const pages = [
   "Challenges",
   "Drill Library",
   "Settings",
-  "Future Premium Features",
 ] as const;
 type Page = (typeof pages)[number] | "Home";
 const icons = [
@@ -87,7 +85,6 @@ const icons = [
   Trophy,
   BookOpen,
   Settings,
-  Crown,
 ];
 let loadWarning = "";
 function initial(): Store {
@@ -328,11 +325,8 @@ function App() {
                 <p>
                   A little progress, every day.
                   <br />
-                  Always free to get started.
+                  Train at your own pace.
                 </p>
-                <button onClick={() => go("Future Premium Features")}>
-                  What’s next for the Lab <ArrowUpRight size={15} />
-                </button>
               </div>
               <button
                 className={page === "Settings" ? "nav-item active" : "nav-item"}
@@ -439,8 +433,6 @@ function App() {
                             "Simple ideas for your next session. Pick one and get moving.",
                           Settings:
                             "Make this space your own. Your data stays in your browser.",
-                          "Future Premium Features":
-                            "An idea for the future. Your training essentials stay free.",
                         } as Record<string, string>
                       )[page]
                     }
@@ -862,60 +854,6 @@ function App() {
                   notify={setNotice}
                   ask={setConfirm}
                 />
-              )}
-              {page === "Future Premium Features" && (
-                <div className="premium-grid">
-                  <section className="card">
-                    <span className="eyebrow">YOUR EVERYDAY ESSENTIALS</span>
-                    <h2>Free, from the first touch.</h2>
-                    <div className="price">
-                      $0 <small>always free core tools</small>
-                    </div>
-                    {[
-                      "Training planner",
-                      "Basic progress tracking",
-                      "Basic challenges",
-                      "Drill library",
-                    ].map((x) => (
-                      <p className="feature-line" key={x}>
-                        <Check size={18} />
-                        {x}
-                      </p>
-                    ))}
-                    <button
-                      className="button dark"
-                      onClick={() => go("Dashboard")}
-                    >
-                      Back to training <ArrowRight size={16} />
-                    </button>
-                  </section>
-                  <section className="card future-card">
-                    <span className="chip">CONCEPT ONLY</span>
-                    <h2>Possible Premium</h2>
-                    <div className="price">
-                      $2.99 <small>/ month</small>
-                    </div>
-                    <p>
-                      Illustrative future pricing — not currently available.
-                    </p>
-                    {[
-                      "Advanced training analytics",
-                      "More detailed progress reports",
-                      "Custom training templates",
-                      "Additional challenge features",
-                      "Ad-free experience, if ads are ever introduced",
-                    ].map((x) => (
-                      <p className="feature-line" key={x}>
-                        <Plus size={18} />
-                        {x}
-                      </p>
-                    ))}
-                    <p className="muted">
-                      There are no subscriptions, payments, or advertisements in
-                      this prototype.
-                    </p>
-                  </section>
-                </div>
               )}
               <footer className="workspace-footer">
                 <span>
@@ -2291,7 +2229,7 @@ function Landing({ go }: { go: (p: Page) => void }) {
             {[
               [
                 "Is First Touch Lab really free?",
-                "Yes. All prototype features are free. A separate future premium concept is illustrative only; there is no checkout or subscription.",
+                "Yes. All training features are free.",
               ],
               [
                 "Do I need an account?",

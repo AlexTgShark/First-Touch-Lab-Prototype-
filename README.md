@@ -104,10 +104,8 @@ For manual testing: start fresh, set a goal, plan tomorrow, edit it, mark it com
 - `scripts/`: standalone HTML and GitHub Pages packaging.
 - `docs/`: prebuilt GitHub Pages site, regenerated with `npm run build:pages`.
 
-## Demonstration-only and limitations
-
-**Future Premium Features** is a concept comparison. **$2.99/month is illustrative future pricing — not currently available.** There is no checkout, subscription, advertising, or purchase simulation. Core functionality is free.
+## Limitations
 
 This prototype has no cloud sync, coaching assessment, calendar integration, reminders, multi-user collaboration, or cross-tab conflict resolution. Incomplete invalid form fields are not persisted as drafts. Performance results are optional free-text practice notes, not automatically parsed scores. Skill results can be removed and re-recorded; training logs can be edited directly. Challenges use date-based eligibility rather than an event audit trail. Very large histories are not paginated. The seven-day planner wraps into a compact grid on phones. Tested automated browser coverage uses Chromium; Safari/Firefox and assistive technology checks remain useful before wider launch.
 
-Future work: test with 5–10 amateur players, learn which workflows they return to, improve accessibility with user feedback, add optional local reminders/templates, and only consider account syncing or paid features after validating regular use.
+Future work: test with 5–10 amateur players, learn which workflows they return to, improve accessibility with user feedback, add optional local reminders/templates.
